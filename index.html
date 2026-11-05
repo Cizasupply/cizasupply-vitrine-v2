@@ -798,6 +798,57 @@
   .float-wa:hover .fw-lab,.float-wa:focus-visible .fw-lab{opacity:1}
   @media (prefers-reduced-motion: reduce){.float-wa{transition:none}}
 
+
+  /* ---------- Nouveautés : recherche, liste de devis, rappel, rendez-vous, chat ---------- */
+  section, .cat, .fin-block{scroll-margin-top:130px}
+  .promo-media{padding:0 !important;position:relative;display:block !important;min-height:220px}
+  .promo-media img{width:100%;height:100%;min-height:220px;object-fit:cover;display:block}
+  .promo-media .promo-cap{position:absolute;left:12px;right:12px;bottom:12px;background:rgba(7,26,51,.9);color:#fff;border:1px solid rgba(212,175,55,.55);border-radius:4px;padding:10px 12px;font-family:"Archivo",sans-serif;font-size:.92rem;font-weight:700;letter-spacing:0;text-transform:none;text-align:left}
+  .promo-media .promo-cap b{color:var(--gold-2)}
+  .search-sec{padding:34px 0 4px}
+  .search-box{background:var(--card);border:1px solid var(--card-border);border-radius:var(--radius);padding:22px}
+  .search-box label{font-weight:800;display:block;margin-bottom:8px}
+  .search-row{display:flex;gap:10px;flex-wrap:wrap}
+  .search-row input{flex:1 1 260px;font:inherit;padding:13px 14px;border:1.5px solid rgba(13,27,46,.25);border-radius:4px}
+  .search-results{margin-top:14px;display:grid;gap:8px}
+  .search-hit{appearance:none;text-align:left;font:inherit;cursor:pointer;background:rgba(212,175,55,.08);border:1px solid rgba(212,175,55,.45);border-radius:4px;padding:12px 14px}
+  .search-hit b{display:block}
+  .search-hit span{color:var(--muted);font-size:.92rem}
+  .search-empty{color:var(--muted);font-weight:600}
+  .flash{outline:3px solid var(--gold);outline-offset:3px;transition:outline .3s}
+  .add-list-btn{appearance:none;cursor:pointer;font:inherit;font-weight:700;margin-top:12px;align-self:flex-start;background:var(--navy);color:#fff;border:0;border-radius:4px;padding:10px 14px}
+  .add-list-btn:hover{background:var(--navy-3)}
+  .add-list-btn.added{background:#0a6e38}
+  .fin-copy .add-list-btn,.kit-copy .add-list-btn{background:var(--gold);color:#241a02}
+  .ql-sec{padding:64px 0 10px}
+  .ql-box{background:var(--card);border:1px solid var(--card-border);border-radius:var(--radius);padding:22px}
+  .ql-items{list-style:none;margin:0 0 16px;padding:0;display:grid;gap:8px}
+  .ql-items li{display:flex;align-items:center;gap:10px;border:1px solid var(--card-border);border-radius:4px;padding:10px 12px;font-weight:600}
+  .ql-items .ql-rm{margin-left:auto;appearance:none;border:0;background:transparent;cursor:pointer;font-size:1.1rem;color:#b3261e;font-weight:800}
+  .ql-empty{color:var(--muted);font-weight:600;margin:0 0 16px}
+  .mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+  @media (max-width:900px){.mini-grid{grid-template-columns:1fr}}
+  .mini-sec{padding:64px 0 10px}
+  .mini-form{background:var(--navy-2);border:1px solid var(--line-dark);border-radius:var(--radius);padding:24px;color:#fff}
+  .mini-form.light{background:var(--card);color:var(--ink);border-color:var(--card-border)}
+  .mini-form label{display:block;font-weight:700;font-size:.9rem;margin:0 0 6px}
+  .mini-form .field{margin-bottom:13px}
+  .mini-form input,.mini-form select,.mini-form textarea{width:100%;font:inherit;padding:11px 12px;border:1.5px solid rgba(13,27,46,.2);border-radius:4px;background:#fff;color:var(--ink)}
+  .mini-result{display:none;margin-top:14px;border:1px solid rgba(212,175,55,.55);background:rgba(212,175,55,.09);border-radius:4px;padding:13px;font-size:.94rem}
+  .mini-result.show{display:block}
+  .list-count-badge{background:var(--gold);color:#241a02;border-radius:999px;padding:1px 8px;font-size:.8rem;font-weight:800}
+  .chat-fab{position:fixed;right:18px;bottom:calc(84px + env(safe-area-inset-bottom));z-index:131;appearance:none;border:0;cursor:pointer;font:inherit;font-weight:800;background:var(--navy);color:#fff;border:1.5px solid rgba(212,175,55,.6);border-radius:999px;padding:12px 16px;box-shadow:0 6px 20px rgba(3,20,12,.35)}
+  .chat-panel{position:fixed;right:18px;bottom:calc(142px + env(safe-area-inset-bottom));z-index:132;width:min(340px,calc(100vw - 36px));background:#fff;color:var(--ink);border:1px solid rgba(13,27,46,.18);border-radius:8px;box-shadow:0 14px 40px rgba(3,10,20,.35);padding:18px}
+  .chat-panel[hidden]{display:none}
+  .chat-panel h3{font-size:1.05rem;margin-bottom:6px}
+  .chat-panel p{color:var(--muted);font-size:.92rem;margin:0 0 12px}
+  .chat-panel textarea{width:100%;font:inherit;padding:11px;border:1.5px solid rgba(13,27,46,.25);border-radius:4px;min-height:84px;resize:vertical}
+  .chat-panel .chat-actions{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+  @media (prefers-color-scheme: dark){
+    .search-box,.ql-box,.mini-form.light{background:#0c2242;color:#e8ecf3}
+    .search-hit span,.search-empty,.ql-empty{color:#a7b3c6}
+  }
+
   /* ---------- Dark mode ---------- */
   @media (prefers-color-scheme: dark){
     body{background:#081426;color:#e8ecf3}
@@ -833,6 +884,7 @@
       <a href="#devis" data-i18n="nav.quote">Devis</a>
       <a href="#contact" data-i18n="nav.contact">Contact</a>
     </nav>
+    <a class="btn btn-ghost" href="#liste-devis" style="padding:9px 13px;font-size:.88rem"><span data-i18n="nav.list">Ma liste de devis</span> <span class="list-count-badge" id="nav-list-count">0</span></a>
     <div class="lang-switch" role="group" aria-label="Langue / Language">
       <button type="button" class="lang-btn is-active" data-lang-btn="fr">FR</button>
       <button type="button" class="lang-btn" data-lang-btn="en">EN</button>
@@ -878,6 +930,21 @@
   </div>
 </div>
 
+
+<!-- ======================= RECHERCHE PRODUITS ======================= -->
+<section class="search-sec" id="recherche">
+  <div class="wrap">
+    <div class="search-box">
+      <p class="kicker" data-i18n="sr.kicker">Recherche de produits</p>
+      <label for="search-input" data-i18n="sr.label">Vous cherchez un article précis ?</label>
+      <div class="search-row">
+        <input id="search-input" type="search" data-ph-fr="Ex. : panneau solaire, vanne inox, câble cuivre, douche…" data-ph-en="E.g.: solar panel, stainless valve, copper cable, shower…" placeholder="Ex. : panneau solaire, vanne inox, câble cuivre, douche…" />
+      </div>
+      <div class="search-results" id="search-results" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
 <!-- ======================= EMPLACEMENT PROMOTIONNEL =======================
      Structure de la bannière promo : remplir les zones data-promo-* avec
      l'offre du moment fournie par le client (titre, texte, visuel, lien).
@@ -887,14 +954,14 @@
     <div class="promo-slot">
       <div class="promo-copy">
         <p class="kicker" data-i18n="promo.kicker">Promotion</p>
-        <h2 data-promo-title data-i18n="promo.title">Emplacement promotionnel</h2>
-        <p data-promo-text data-i18n="promo.text">Cet emplacement accueille les promotions de CIZA SUPPLY — et les produits de partenaires sélectionnés qui veulent toucher nos acheteurs.</p>
+        <h2 data-promo-title data-i18n="promo.title">Arrivage en cours</h2>
+        <p data-promo-text data-i18n="promo.text">Demandez votre catalogue Quincaillerie : gaines, câbles cuivre, vannes inox, clous et outillage — arrivage en cours, devis sur demande au bureau de Bujumbura.</p>
         <div class="hero-ctas" style="margin-top:0">
           <a class="btn btn-gold" href="#devis" data-promo-cta data-i18n="promo.cta">Demander un devis</a>
           <a class="btn btn-ghost" href="#devis" data-i18n="promo.cta2">Vous voulez afficher vos produits ici ? Contactez-nous</a>
         </div>
       </div>
-      <div class="promo-media" data-promo-media data-i18n="promo.media">Visuel de l'offre — à venir</div>
+      <div class="promo-media" data-promo-media><img src="assets/a2d56b1b98ecf377.jpg" alt="Panneaux solaires photovoltaïques — arrivage CIZA SUPPLY" data-alt-en="Photovoltaic solar panels — CIZA SUPPLY arrival" loading="lazy" /><span class="promo-cap"><b data-i18n="promo.media">Arrivage en cours :</b> <span data-i18n="promo.media2">demandez votre catalogue Quincaillerie</span></span></div>
     </div>
   </div>
 </section>
@@ -1338,6 +1405,31 @@
   </div>
 </section>
 
+
+<!-- ======================= LISTE DE DEVIS ======================= -->
+<section class="ql-sec" id="liste-devis">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker" data-i18n="ql.kicker">Liste de devis</p>
+      <h2 data-i18n="ql.h2">Votre demande groupée, en un seul envoi</h2>
+      <p data-i18n="ql.sub">Parcourez le site, touchez « Ajouter à ma liste » sur les produits qui vous intéressent, puis envoyez tout en une seule fois. Pas d'achat en ligne : c'est une demande de devis, comme les autres formulaires du site.</p>
+    </div>
+    <div class="ql-box">
+      <p class="ql-empty" id="ql-empty" data-i18n="ql.empty">Votre liste est vide pour le moment — ajoutez des produits depuis les catégories et la finition ci-dessus.</p>
+      <ul class="ql-items" id="ql-items"></ul>
+      <form id="ql-form" novalidate>
+        <div class="mini-form light" style="border:0;padding:0">
+          <div class="field"><label for="ql-name"><span data-i18n="qf.name">Nom complet</span> *</label><input id="ql-name" type="text" autocomplete="name" /></div>
+          <div class="field"><label for="ql-contact">WhatsApp / E-mail *</label><input id="ql-contact" type="text" /></div>
+          <div class="field"><label for="ql-msg" data-i18n="qf.msg">Message</label><textarea id="ql-msg" rows="3"></textarea></div>
+          <button type="submit" class="btn btn-gold" data-i18n="ql.send">Envoyer ma liste de devis</button>
+          <div class="mini-result" id="ql-result" aria-live="polite"></div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
 <!-- ======================= KIT MAISON ======================= -->
 <section class="kit on-dark" id="kit-maison">
   <div class="wrap">
@@ -1541,6 +1633,11 @@
         <summary data-i18n="faq5.q">Quels sont les délais d'une commande ?</summary>
         <p data-i18n="faq5.a">Les délais dépendent de la catégorie, des quantités et de la production en usine. Ils vous sont confirmés par écrit dans le devis, avant que vous ne vous engagiez.</p>
       </details>
+
+      <details class="faq-item">
+        <summary data-i18n="faq7.q">Le prix inclut-il le transport et le dédouanement jusqu'à Bujumbura ?</summary>
+        <p data-i18n="faq7.a">Réponse en cours de confirmation : ce point est en train d'être confirmé de manière définitive par la direction. En attendant, il est précisé par écrit dans chaque devis, au bureau, avant toute validation de commande — demandez-le explicitement lors de votre demande de devis, par WhatsApp Burundi au +257 79 945 007 ou via la Direction au +1 514 502 9503.</p>
+      </details>
       <details class="faq-item">
         <summary data-i18n="faq6.q">Je cherche un produit qui n'est pas dans les catégories. Pouvez-vous le sourcer ?</summary>
         <p data-i18n="faq6.a">Oui, dans la plupart des cas : nous sourçons à la demande. Décrivez-nous le produit sur WhatsApp, et notre bureau en Chine vérifie sa disponibilité directement auprès des usines.</p>
@@ -1559,7 +1656,8 @@
         <p data-i18n="qf.sub">Vous êtes un acheteur international et vous n'utilisez pas WhatsApp ? Remplissez ce formulaire : dès l'envoi, la confirmation s'affiche à l'écran avec votre numéro de référence — notez-le. Notre bureau prépare ensuite votre devis et vous répond par e-mail.</p>
         <p data-i18n="qf.sub2">Les prochaines étapes : 1) confirmation à l'écran avec votre numéro de référence ; 2) vérification des disponibilités et des conditions auprès des usines ; 3) devis écrit envoyé par e-mail, sans engagement.</p>
         <div class="alt-ch">
-          <div><b>WhatsApp</b><span>+1 514 502 9503</span></div>
+          <div><b data-i18n="num.dir">WhatsApp de la Direction (Liaison Internationale)</b><span>+1 514 502 9503</span></div>
+          <div><b data-i18n="num.bi">WhatsApp Burundi</b><span>+257 79 945 007</span></div>
           <div><b data-i18n="qf.altChina">Bureau Chine</b><span>+86 187 2139 6720</span></div>
           <div><b>Instagram</b><span>@cizasupply</span></div>
           <div><b data-i18n="qf.altOffice">Bureau</b><span data-i18n="qf.altOfficeV">Bujumbura, Burundi — rendez-vous sur demande</span></div>
@@ -1663,6 +1761,41 @@
   </div>
 </section>
 
+
+<!-- ======================= RAPPEL & RENDEZ-VOUS ======================= -->
+<section class="mini-sec" id="rappel-rdv">
+  <div class="wrap">
+    <div class="mini-grid">
+      <div>
+        <p class="kicker" data-i18n="cb.kicker">Être rappelé</p>
+        <h2 style="font-size:1.5rem;font-weight:800;margin-bottom:10px" data-i18n="cb.h2">On vous rappelle</h2>
+        <p style="color:var(--muted);margin:0 0 18px" data-i18n="cb.sub">Laissez votre numéro : l'équipe CIZA SUPPLY vous rappelle pour parler de votre besoin.</p>
+        <form class="mini-form light" id="cb-form" novalidate>
+          <div class="field"><label for="cb-name"><span data-i18n="qf.name">Nom complet</span> *</label><input id="cb-name" type="text" autocomplete="name" /></div>
+          <div class="field"><label for="cb-phone"><span data-i18n="cb.phone">Numéro à rappeler</span> *</label><input id="cb-phone" type="tel" autocomplete="tel" placeholder="+257 …" /></div>
+          <div class="field"><label for="cb-when" data-i18n="cb.when">Moment souhaité</label><select id="cb-when"><option data-i18n="cb.w1">Dès que possible</option><option data-i18n="cb.w2">Ce matin</option><option data-i18n="cb.w3">Cet après-midi</option><option data-i18n="cb.w4">Demain</option></select></div>
+          <button type="submit" class="btn btn-gold" data-i18n="cb.send">Demander à être rappelé</button>
+          <div class="mini-result" id="cb-result" aria-live="polite"></div>
+        </form>
+      </div>
+      <div>
+        <p class="kicker" data-i18n="rv.kicker">Prise de rendez-vous</p>
+        <h2 style="font-size:1.5rem;font-weight:800;margin-bottom:10px" data-i18n="rv.h2">Visite au bureau de Bujumbura</h2>
+        <p style="color:var(--muted);margin:0 0 18px" data-i18n="rv.sub">Réservez votre passage au bureau : 6ème Avenue, Quartier Buhomba, Zone Mutimbuzi, Commune Ntahangwa.</p>
+        <form class="mini-form light" id="rv-form" novalidate>
+          <div class="field"><label for="rv-name"><span data-i18n="qf.name">Nom complet</span> *</label><input id="rv-name" type="text" autocomplete="name" /></div>
+          <div class="field"><label for="rv-phone"><span data-i18n="qf.phone">Téléphone (optionnel)</span> *</label><input id="rv-phone" type="tel" autocomplete="tel" placeholder="+257 …" /></div>
+          <div class="field"><label for="rv-date"><span data-i18n="rv.date">Date souhaitée</span> *</label><input id="rv-date" type="date" /></div>
+          <div class="field"><label for="rv-time"><span data-i18n="rv.time">Heure souhaitée</span> *</label><input id="rv-time" type="time" /></div>
+          <div class="field"><label for="rv-why" data-i18n="rv.why">Motif de la visite</label><textarea id="rv-why" rows="3" data-ph-fr="Ex. : devis quincaillerie, kit solaire…" data-ph-en="E.g.: hardware quote, solar kit…" placeholder="Ex. : devis quincaillerie, kit solaire…"></textarea></div>
+          <button type="submit" class="btn btn-gold" data-i18n="rv.send">Réserver ma visite</button>
+          <div class="mini-result" id="rv-result" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ======================= CONTACT ======================= -->
 <section class="contact on-dark" id="contact">
   <div class="wrap">
@@ -1674,7 +1807,12 @@
         <div class="channels">
           <a class="channel wa" data-wa="general" href="https://wa.me/15145029503?text=Bonjour%20CIZA%20SUPPLY%2C%20je%20souhaite%20un%20devis." target="_blank" rel="noopener">
             <span class="ch-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m0 1.8c2.16 0 4.19.84 5.72 2.37a8.04 8.04 0 0 1 2.36 5.74c0 4.47-3.64 8.11-8.11 8.11-1.52 0-3-.42-4.28-1.21l-.31-.18-3.19.84.85-3.11-.2-.32a8.08 8.08 0 0 1-1.24-4.29c0-4.47 3.64-8.11 8.11-8.11m-4.1 3.9c-.19 0-.5.07-.76.35-.26.28-1 .97-1 2.37s1.02 2.75 1.16 2.94c.14.19 2 3.06 4.85 4.29.68.29 1.21.47 1.62.6.68.22 1.28.19 1.77.11.54-.08 1.66-.68 1.9-1.55.23-.87.23-1.62.16-1.77-.07-.15-.25-.24-.53-.42-.28-.14-1.64-.81-1.94-.9-.3-.09-.52-.14-.74.14-.22.28-.85 1.05-1.06 1.28-.21.23-.42.26-.7.09-.28-.14-1.18-.44-2.25-1.39-.83-.74-1.39-1.66-1.55-1.94-.16-.28-.02-.43.12-.57.13-.13.28-.33.42-.49.14-.16.19-.28.28-.47.09-.19.05-.35-.02-.49-.07-.14-.74-1.79-.99-2.45-.26-.63-.53-.54-.73-.55z"/></svg></span>
-            <span><span class="ch-lab">WhatsApp</span><br /><span class="ch-val">+1 514 502 9503</span></span>
+            <span><span class="ch-lab" data-i18n="num.dir">WhatsApp de la Direction (Liaison Internationale)</span><br /><span class="ch-val">+1 514 502 9503</span></span>
+          </a>
+
+          <a class="channel wa" data-wa="general" data-phone="25779945007" href="https://wa.me/25779945007?text=Bonjour%20CIZA%20SUPPLY%2C%20je%20souhaite%20un%20devis." target="_blank" rel="noopener">
+            <span class="ch-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m0 1.8c2.16 0 4.19.84 5.72 2.37a8.04 8.04 0 0 1 2.36 5.74c0 4.47-3.64 8.11-8.11 8.11-1.52 0-3-.42-4.28-1.21l-.31-.18-3.19.84.85-3.11-.2-.32a8.08 8.08 0 0 1-1.24-4.29c0-4.47 3.64-8.11 8.11-8.11m-4.1 3.9c-.19 0-.5.07-.76.35-.26.28-1 .97-1 2.37s1.02 2.75 1.16 2.94c.14.19 2 3.06 4.85 4.29.68.29 1.21.47 1.62.6.68.22 1.28.19 1.77.11.54-.08 1.66-.68 1.9-1.55.23-.87.23-1.62.16-1.77-.07-.15-.25-.24-.53-.42-.28-.14-1.64-.81-1.94-.9-.3-.09-.52-.14-.74.14-.22.28-.85 1.05-1.06 1.28-.21.23-.42.26-.7.09-.28-.14-1.18-.44-2.25-1.39-.83-.74-1.39-1.66-1.55-1.94-.16-.28-.02-.43.12-.57.13-.13.28-.33.42-.49.14-.16.19-.28.28-.47.09-.19.05-.35-.02-.49-.07-.14-.74-1.79-.99-2.45-.26-.63-.53-.54-.73-.55z"/></svg></span>
+            <span><span class="ch-lab" data-i18n="num.bi">WhatsApp Burundi</span><br /><span class="ch-val">+257 79 945 007</span></span>
           </a>
           <a class="channel wa" data-wa="general" data-phone="8618721396720" href="https://wa.me/8618721396720?text=Bonjour%20CIZA%20SUPPLY%2C%20je%20souhaite%20un%20devis." target="_blank" rel="noopener">
             <span class="ch-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
@@ -1729,6 +1867,19 @@
     <p class="foot-legal-line"><span data-i18n="foot.legalLine">Ciza Group SURL — RC 0082870/26 — NIF 4003446905</span> · <a href="#mentions-legales" data-open-page="pg-legal" data-i18n="foot.legalFull">Coordonnées complètes dans les mentions légales</a></p>
   </div>
 </footer>
+
+
+<!-- ======================= CHAT EN DIRECT (via WhatsApp) ======================= -->
+<button type="button" class="chat-fab" id="chat-open" data-i18n="chat.open">💬 Discuter en direct</button>
+<div class="chat-panel" id="chat-panel" hidden role="dialog" aria-label="Chat">
+  <h3 data-i18n="chat.h">Discutez avec CIZA SUPPLY</h3>
+  <p data-i18n="chat.p">Écrivez votre message ici : il part sur WhatsApp Burundi (+257 79 945 007), où l'équipe vous répond.</p>
+  <textarea id="chat-msg" data-ph-fr="Votre message…" data-ph-en="Your message…" placeholder="Votre message…"></textarea>
+  <div class="chat-actions">
+    <button type="button" class="btn btn-wa" id="chat-send" data-i18n="chat.send">Envoyer sur WhatsApp</button>
+    <button type="button" class="btn btn-line" id="chat-close" style="color:var(--ink);border-color:rgba(13,27,46,.4)" data-i18n="chat.close">Fermer</button>
+  </div>
+</div>
 
 <!-- ======================= WHATSAPP FLOTTANT ======================= -->
 <a class="float-wa wa" data-wa="general" href="https://wa.me/15145029503?text=Bonjour%20CIZA%20SUPPLY%2C%20je%20souhaite%20un%20devis." target="_blank" rel="noopener" aria-label="WhatsApp — +1 514 502 9503">
@@ -1805,7 +1956,7 @@
       <div class="legal-row"><span class="lr-lab" data-i18n="legal.l6">Registre de commerce</span><span class="lr-val">RC 0082870/26</span></div>
       <div class="legal-row"><span class="lr-lab" data-i18n="legal.l7">NIF</span><span class="lr-val">4003446905</span></div>
       <div class="legal-row"><span class="lr-lab" data-i18n="legal.l2">Bureau</span><span class="lr-val" data-i18n="legal.v2">6ème Avenue, Quartier Buhomba, Zone Mutimbuzi, Commune Ntahangwa, Province Bujumbura, Burundi.</span></div>
-      <div class="legal-row"><span class="lr-lab" data-i18n="legal.l3">Contact</span><span class="lr-val" data-i18n="legal.v3">WhatsApp +1 514 502 9503 — Bureau Chine +86 187 2139 6720 — Instagram @cizasupply.</span></div>
+      <div class="legal-row"><span class="lr-lab" data-i18n="legal.l3">Contact</span><span class="lr-val" data-i18n="legal.v3">WhatsApp de la Direction (Liaison Internationale) +1 514 502 9503 — WhatsApp Burundi +257 79 945 007 — Bureau Chine +86 187 2139 6720 — Instagram @cizasupply.</span></div>
       <div class="legal-row"><span class="lr-lab" data-i18n="legal.l4">Site du groupe</span><span class="lr-val" data-i18n="legal.v4">cizagroup.com</span></div>
     </div>
     <p data-i18n="legal.p1">Tous les contenus publiés sur ce site sont protégés par le droit d'auteur — voir le copyright en pied de page et les Conditions d'utilisation.</p>
@@ -2335,7 +2486,7 @@
       "legal.l2": "Bureau",
       "legal.v2": "6ème Avenue, Quartier Buhomba, Zone Mutimbuzi, Commune Ntahangwa, Province Bujumbura, Burundi.",
       "legal.l3": "Contact",
-      "legal.v3": "WhatsApp +1 514 502 9503 — Bureau Chine +86 187 2139 6720 — Instagram @cizasupply.",
+      "legal.v3": "WhatsApp de la Direction (Liaison Internationale) +1 514 502 9503 — WhatsApp Burundi +257 79 945 007 — Bureau Chine +86 187 2139 6720 — Instagram @cizasupply.",
       "legal.l4": "Site du groupe",
       "legal.v4": "cizagroup.com",
       "legal.l5": "Raison sociale",
@@ -2346,11 +2497,42 @@
       "nav.quote": "Devis",
       "fw.lab": "Écrivez-nous sur WhatsApp",
       "promo.kicker": "Promotion",
-      "promo.title": "Emplacement promotionnel",
-      "promo.text": "Cet emplacement accueille les promotions de CIZA SUPPLY — et les produits de partenaires sélectionnés qui veulent toucher nos acheteurs.",
+      "promo.title": "Arrivage en cours",
+      "promo.text": "Demandez votre catalogue Quincaillerie : gaines, câbles cuivre, vannes inox, clous et outillage — arrivage en cours, devis sur demande au bureau de Bujumbura.",
       "promo.cta": "Demander un devis",
       "promo.cta2": "Vous voulez afficher vos produits ici ? Contactez-nous",
-      "promo.media": "Visuel de l'offre — à venir",
+      "promo.media": "Arrivage en cours :",
+      "promo.media2": "demandez votre catalogue Quincaillerie",
+      "num.dir": "WhatsApp de la Direction (Liaison Internationale)",
+      "num.bi": "WhatsApp Burundi",
+      "nav.list": "Ma liste de devis",
+      "sr.kicker": "Recherche de produits",
+      "sr.label": "Vous cherchez un article précis ?",
+      "faq7.q": "Le prix inclut-il le transport et le dédouanement jusqu'à Bujumbura ?",
+      "faq7.a": "Réponse en cours de confirmation : ce point est en train d'être confirmé de manière définitive par la direction. En attendant, il est précisé par écrit dans chaque devis, au bureau, avant toute validation de commande — demandez-le explicitement lors de votre demande de devis, par WhatsApp Burundi au +257 79 945 007 ou via la Direction au +1 514 502 9503.",
+      "ql.kicker": "Liste de devis",
+      "ql.h2": "Votre demande groupée, en un seul envoi",
+      "ql.sub": "Parcourez le site, touchez « Ajouter à ma liste » sur les produits qui vous intéressent, puis envoyez tout en une seule fois. Pas d'achat en ligne : c'est une demande de devis, comme les autres formulaires du site.",
+      "ql.empty": "Votre liste est vide pour le moment — ajoutez des produits depuis les catégories et la finition ci-dessus.",
+      "ql.send": "Envoyer ma liste de devis",
+      "cb.kicker": "Être rappelé",
+      "cb.h2": "On vous rappelle",
+      "cb.sub": "Laissez votre numéro : l'équipe CIZA SUPPLY vous rappelle pour parler de votre besoin.",
+      "cb.phone": "Numéro à rappeler",
+      "cb.when": "Moment souhaité",
+      "cb.w1": "Dès que possible", "cb.w2": "Ce matin", "cb.w3": "Cet après-midi", "cb.w4": "Demain",
+      "cb.send": "Demander à être rappelé",
+      "rv.kicker": "Prise de rendez-vous",
+      "rv.h2": "Visite au bureau de Bujumbura",
+      "rv.sub": "Réservez votre passage au bureau : 6ème Avenue, Quartier Buhomba, Zone Mutimbuzi, Commune Ntahangwa.",
+      "rv.date": "Date souhaitée", "rv.time": "Heure souhaitée", "rv.why": "Motif de la visite",
+      "rv.send": "Réserver ma visite",
+      "chat.open": "Discuter en direct",
+      "chat.h": "Discutez avec CIZA SUPPLY",
+      "chat.p": "Écrivez votre message ici : il part sur WhatsApp Burundi (+257 79 945 007), où l'équipe vous répond.",
+      "chat.send": "Envoyer sur WhatsApp",
+      "chat.close": "Fermer",
+
       "ph.lab": "Produits phares",
       "ph1a": "Vanne à bille inox 3/4″ — levier bleu, gamme complète de diamètres",
       "ph1b": "Câble cuivre BV/BVR — 450/750 V, âme multibrins",
@@ -2667,7 +2849,7 @@
       "legal.l2": "Office",
       "legal.v2": "6ème Avenue, Quartier Buhomba, Zone Mutimbuzi, Commune Ntahangwa, Bujumbura Province, Burundi.",
       "legal.l3": "Contact",
-      "legal.v3": "WhatsApp +1 514 502 9503 — China office +86 187 2139 6720 — Instagram @cizasupply.",
+      "legal.v3": "Management WhatsApp (International Liaison) +1 514 502 9503 — WhatsApp Burundi +257 79 945 007 — China office +86 187 2139 6720 — Instagram @cizasupply.",
       "legal.l4": "Group website",
       "legal.v4": "cizagroup.com",
       "legal.l5": "Company name",
@@ -2678,11 +2860,42 @@
       "nav.quote": "Quote",
       "fw.lab": "Message us on WhatsApp",
       "promo.kicker": "Promotion",
-      "promo.title": "Promotional space",
-      "promo.text": "This space hosts CIZA SUPPLY promotions — and products from selected partners who want to reach our buyers.",
+      "promo.title": "New arrival in progress",
+      "promo.text": "Ask for your Hardware catalogue: conduits, copper cables, stainless valves, nails and tools — new arrival in progress, quote on request at the Bujumbura office.",
       "promo.cta": "Request a quote",
       "promo.cta2": "Want to show your products here? Contact us",
-      "promo.media": "Offer image — coming soon",
+      "promo.media": "New arrival in progress:",
+      "promo.media2": "ask for your Hardware catalogue",
+      "num.dir": "Management WhatsApp (International Liaison)",
+      "num.bi": "WhatsApp Burundi",
+      "nav.list": "My quote list",
+      "sr.kicker": "Product search",
+      "sr.label": "Looking for a specific item?",
+      "faq7.q": "Does the price include transport and customs clearance to Bujumbura?",
+      "faq7.a": "Answer pending confirmation: this point is being definitively confirmed by management. In the meantime, it is stated in writing in every quote, at the office, before any order is approved — please ask explicitly when requesting your quote, via WhatsApp Burundi on +257 79 945 007 or via Management on +1 514 502 9503.",
+      "ql.kicker": "Quote list",
+      "ql.h2": "Your grouped request, sent in one go",
+      "ql.sub": "Browse the site, tap “Add to my list” on the products you are interested in, then send everything at once. No online purchase: this is a quote request, like the other forms on this site.",
+      "ql.empty": "Your list is empty for now — add products from the categories and finishing sections above.",
+      "ql.send": "Send my quote list",
+      "cb.kicker": "Request a callback",
+      "cb.h2": "We call you back",
+      "cb.sub": "Leave your number: the CIZA SUPPLY team will call you back to discuss your needs.",
+      "cb.phone": "Number to call back",
+      "cb.when": "Preferred time",
+      "cb.w1": "As soon as possible", "cb.w2": "This morning", "cb.w3": "This afternoon", "cb.w4": "Tomorrow",
+      "cb.send": "Request a callback",
+      "rv.kicker": "Book an appointment",
+      "rv.h2": "Visit the Bujumbura office",
+      "rv.sub": "Book your visit to the office: 6ème Avenue, Quartier Buhomba, Zone Mutimbuzi, Commune Ntahangwa.",
+      "rv.date": "Preferred date", "rv.time": "Preferred time", "rv.why": "Reason for the visit",
+      "rv.send": "Book my visit",
+      "chat.open": "Live chat",
+      "chat.h": "Chat with CIZA SUPPLY",
+      "chat.p": "Write your message here: it goes to WhatsApp Burundi (+257 79 945 007), where the team replies.",
+      "chat.send": "Send via WhatsApp",
+      "chat.close": "Close",
+
       "ph.lab": "Featured products",
       "ph1a": "Stainless ball valve 3/4″ — blue lever, full size range",
       "ph1b": "Copper cable BV/BVR — 450/750 V, multi-strand core",
@@ -3141,5 +3354,169 @@
   }
 })();
 </script>
+
+<script>
+(function(){
+  "use strict";
+  var KEY = "5dd75877-534a-4291-b280-5430afd92733";
+  var EP = "https://api.web3forms.com/submit";
+  function L(){ return document.documentElement.getAttribute("lang") === "en" ? "en" : "fr"; }
+  function norm(x){ return (x||"").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,""); }
+  function ref(p){ var d=new Date(); return p+"-"+d.getFullYear()+("0"+(d.getMonth()+1)).slice(-2)+("0"+d.getDate()).slice(-2)+"-"+Math.floor(1000+Math.random()*9000); }
+
+  /* ----- Liste de devis (en mémoire, session uniquement) ----- */
+  var list = [];
+  function renderList(){
+    var ul = document.getElementById("ql-items");
+    var empty = document.getElementById("ql-empty");
+    var badge = document.getElementById("nav-list-count");
+    if(badge) badge.textContent = list.length;
+    if(!ul) return;
+    ul.innerHTML = "";
+    if(empty) empty.style.display = list.length ? "none" : "";
+    list.forEach(function(name, i){
+      var li = document.createElement("li");
+      var sp = document.createElement("span"); sp.textContent = name;
+      var rm = document.createElement("button"); rm.type="button"; rm.className="ql-rm"; rm.setAttribute("aria-label","Retirer / Remove"); rm.textContent="×";
+      rm.addEventListener("click", function(){ list.splice(i,1); renderList(); });
+      li.appendChild(sp); li.appendChild(rm); ul.appendChild(li);
+    });
+  }
+  function addBtnLabel(btn){
+    var name = btn.getAttribute("data-product") || "";
+    var added = list.indexOf(name) !== -1;
+    btn.textContent = added ? (L()==="en" ? "✓ Added to my list" : "✓ Ajouté à ma liste") : (L()==="en" ? "+ Add to my quote list" : "+ Ajouter à ma liste de devis");
+    btn.classList.toggle("added", added);
+  }
+  function refreshAddBtns(){ document.querySelectorAll(".add-list-btn").forEach(addBtnLabel); }
+  function makeAddBtn(name, parent){
+    if(!name || !parent) return;
+    var b = document.createElement("button"); b.type="button"; b.className="add-list-btn"; b.setAttribute("data-product", name);
+    b.addEventListener("click", function(){
+      var i = list.indexOf(name);
+      if(i===-1) list.push(name); else list.splice(i,1);
+      renderList(); refreshAddBtns();
+      if(i===-1) document.getElementById("liste-devis").scrollIntoView({behavior:"smooth", block:"nearest"});
+    });
+    parent.appendChild(b); addBtnLabel(b);
+  }
+  document.querySelectorAll(".cat").forEach(function(cat){
+    var h = cat.querySelector("h3"); var body = cat.querySelector(".cat-body");
+    if(h && body) makeAddBtn(h.textContent.trim(), body);
+  });
+  document.querySelectorAll(".fin-block").forEach(function(bl){
+    var h = bl.querySelector("h3"); var copy = bl.querySelector(".fin-copy");
+    if(h && copy) makeAddBtn(h.textContent.trim(), copy);
+  });
+  (function(){ var kc=document.querySelector(".kit-copy"); if(kc) makeAddBtn(L()==="en"?"Solar Home Kit":"Kit Maison solaire", kc); })();
+  renderList();
+
+  /* ----- Recherche de produits ----- */
+  var index = [];
+  function buildIndex(){
+    index = [];
+    document.querySelectorAll(".cat").forEach(function(cat){
+      var h = cat.querySelector("h3"); if(!h) return;
+      var txt = cat.textContent || "";
+      index.push({title: h.textContent.trim(), desc: txt.trim().slice(0,180), el: cat});
+    });
+    document.querySelectorAll(".fin-block").forEach(function(bl){
+      var h = bl.querySelector("h3"); if(!h) return;
+      index.push({title: h.textContent.trim(), desc: (bl.textContent||"").trim().slice(0,180), el: bl});
+    });
+    var kit = document.querySelector(".kit-copy h3");
+    if(kit) index.push({title: kit.textContent.trim(), desc: "Kit Maison solaire — Solar Home Kit", el: document.getElementById("kit-maison")});
+  }
+  buildIndex();
+  var sInput = document.getElementById("search-input");
+  var sRes = document.getElementById("search-results");
+  function doSearch(){
+    if(!sRes) return;
+    var q = norm(sInput.value.trim());
+    sRes.innerHTML = "";
+    if(q.length < 2) return;
+    var hits = index.filter(function(it){ return norm(it.title+" "+it.desc).indexOf(q) !== -1; });
+    if(!hits.length){
+      var p = document.createElement("p"); p.className="search-empty";
+      p.textContent = L()==="en" ? "No product found — describe it to us on WhatsApp, we source on request." : "Aucun produit trouvé — décrivez-le-nous sur WhatsApp, nous le sourçons à la demande.";
+      sRes.appendChild(p); return;
+    }
+    hits.slice(0,8).forEach(function(it){
+      var b = document.createElement("button"); b.type="button"; b.className="search-hit";
+      var bb=document.createElement("b"); bb.textContent=it.title;
+      var ss=document.createElement("span"); ss.textContent=it.desc;
+      b.appendChild(bb); b.appendChild(ss);
+      b.addEventListener("click", function(){
+        it.el.scrollIntoView({behavior:"smooth", block:"start"});
+        it.el.classList.add("flash"); setTimeout(function(){ it.el.classList.remove("flash"); }, 2200);
+      });
+      sRes.appendChild(b);
+    });
+  }
+  if(sInput) sInput.addEventListener("input", doSearch);
+
+  /* ----- Envoi Web3Forms générique (succès seulement si confirmé) ----- */
+  function sendForm(subject, text, resultEl, okMsg, failMsg){
+    resultEl.classList.add("show");
+    resultEl.textContent = L()==="en" ? "Sending…" : "Envoi en cours…";
+    var payload = {access_key: KEY, subject: subject, from_name: "CIZA SUPPLY — site web", message: text, botcheck: false};
+    fetch(EP, {method:"POST", headers:{"Content-Type":"application/json","Accept":"application/json"}, body: JSON.stringify(payload)})
+      .then(function(r){ return r.json().catch(function(){return null;}).then(function(d){ return r.ok && !!d && (d.success===true || String(d.success)==="true"); }); })
+      .then(function(ok){
+        resultEl.textContent = (ok ? okMsg : failMsg) + "\n" + text;
+        if(!ok){
+          var a=document.createElement("a"); a.href="mailto:infos@cizagroup.com?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(text);
+          a.textContent = L()==="en" ? " Send by e-mail instead" : " L'envoyer par e-mail à la place"; a.style.fontWeight="800";
+          resultEl.appendChild(document.createElement("br")); resultEl.appendChild(a);
+        }
+      })
+      .catch(function(){ resultEl.textContent = failMsg + "\n" + text; });
+  }
+  function wireMini(formId, resultId, prefix, subject, build){
+    var f=document.getElementById(formId); if(!f) return;
+    f.addEventListener("submit", function(e){
+      e.preventDefault();
+      var out=document.getElementById(resultId);
+      var data=build();
+      if(!data){ out.classList.add("show"); out.textContent = L()==="en" ? "Please fill in the required fields." : "Merci de remplir les champs obligatoires."; return; }
+      var r=ref(prefix);
+      var text=data+"\nRéférence / Reference : "+r;
+      sendForm(subject+" — "+r, text, out,
+        L()==="en" ? "Sent — thank you! Your reference:" : "Envoyé — merci ! Votre référence :",
+        L()==="en" ? "Not sent yet — nothing was received on our side. Use the e-mail link below:" : "Pas encore envoyé — rien n'a été reçu de notre côté. Utilisez le lien e-mail ci-dessous :");
+    });
+  }
+  function val(id){ var e=document.getElementById(id); return e ? e.value.trim() : ""; }
+  wireMini("cb-form","cb-result","CB", L()==="en"?"Callback request — CIZA SUPPLY":"Demande de rappel — CIZA SUPPLY", function(){
+    if(!val("cb-name")||!val("cb-phone")) return null;
+    return "DEMANDE DE RAPPEL / CALLBACK\nNom / Name : "+val("cb-name")+"\nTéléphone / Phone : "+val("cb-phone")+"\nMoment / Preferred time : "+val("cb-when");
+  });
+  wireMini("rv-form","rv-result","RV", L()==="en"?"Office appointment — CIZA SUPPLY":"Rendez-vous bureau — CIZA SUPPLY", function(){
+    if(!val("rv-name")||!val("rv-phone")||!val("rv-date")||!val("rv-time")) return null;
+    return "RENDEZ-VOUS BUREAU BUJUMBURA / OFFICE APPOINTMENT\nNom / Name : "+val("rv-name")+"\nTéléphone / Phone : "+val("rv-phone")+"\nDate : "+val("rv-date")+"\nHeure / Time : "+val("rv-time")+"\nMotif / Reason : "+val("rv-why");
+  });
+  wireMini("ql-form","ql-result","QL", L()==="en"?"Quote list — CIZA SUPPLY":"Liste de devis — CIZA SUPPLY", function(){
+    if(!list.length||!val("ql-name")||!val("ql-contact")) return null;
+    return "LISTE DE DEVIS / QUOTE LIST\nNom / Name : "+val("ql-name")+"\nContact : "+val("ql-contact")+"\nProduits / Products :\n- "+list.join("\n- ")+"\nMessage : "+val("ql-msg");
+  });
+
+  /* ----- Chat en direct -> WhatsApp Burundi ----- */
+  var panel=document.getElementById("chat-panel");
+  var openB=document.getElementById("chat-open");
+  if(openB && panel){
+    openB.addEventListener("click", function(){ panel.hidden = !panel.hidden; });
+    document.getElementById("chat-close").addEventListener("click", function(){ panel.hidden=true; });
+    document.getElementById("chat-send").addEventListener("click", function(){
+      var m=document.getElementById("chat-msg").value.trim() || (L()==="en"?"Hello CIZA SUPPLY, I would like information.":"Bonjour CIZA SUPPLY, je souhaite un renseignement.");
+      window.open("https://wa.me/25779945007?text="+encodeURIComponent(m), "_blank", "noopener");
+    });
+  }
+
+  /* Langue : libellés dynamiques */
+  new MutationObserver(function(){ refreshAddBtns(); buildIndex(); if(sInput && sInput.value) doSearch(); })
+    .observe(document.documentElement, {attributes:true, attributeFilter:["lang"]});
+})();
+</script>
+
 </body>
 </html>
