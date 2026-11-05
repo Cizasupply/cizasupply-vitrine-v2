@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cizasupply.github.io/sitemap.xml
