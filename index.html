@@ -491,15 +491,23 @@
     .topnav{gap:15px}
     .topnav a{font-size:.9rem}
   }
-  /* Mobile header: logo on its own row, language + WhatsApp below */
+  /* Mobile header: logo on its own row, then one compact row —
+     quote list + language + WhatsApp, all small enough to fit side by side */
   @media (max-width:640px){
-    .topbar-in{gap:8px 12px;padding:9px 0}
+    .topbar-in{gap:6px 8px;padding:8px 0;flex-wrap:wrap}
     .topbar .logo{flex:1 1 100%}
-    .topbar .logo img{height:46px}
+    .topbar .logo img{height:42px}
     .topnav{display:none}
     .lang-switch{margin-left:auto}
-    .lang-btn{padding:6px 10px}
-    .topbar .btn{padding:7px 11px;font-size:.82rem}
+    .lang-btn{padding:4px 7px;font-size:.68rem}
+    .topbar .btn{
+      padding:5px 8px;font-size:.72rem;gap:4px;line-height:1.2;
+      white-space:nowrap;min-width:0;
+    }
+    .topbar .btn svg{width:14px;height:14px}
+    .topbar .list-count-badge{padding:0 6px;font-size:.68rem}
+    /* Hero calls to action: compact on phones, not full-height blocks */
+    .hero-ctas .btn{padding:10px 14px;font-size:.9rem}
   }
 
   /* ---------- About ---------- */
@@ -844,6 +852,14 @@
   .chat-panel p{color:var(--muted);font-size:.92rem;margin:0 0 12px}
   .chat-panel textarea{width:100%;font:inherit;padding:11px;border:1.5px solid rgba(13,27,46,.25);border-radius:4px;min-height:84px;resize:vertical}
   .chat-panel .chat-actions{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+  /* Mobile: floating buttons compact as well (after the base rules above,
+     so these win on phones) */
+  @media (max-width:640px){
+    .chat-fab{right:12px;padding:8px 12px;font-size:.82rem;bottom:calc(66px + env(safe-area-inset-bottom))}
+    .float-wa{right:12px;width:46px;height:46px;bottom:calc(12px + env(safe-area-inset-bottom))}
+    .float-wa svg{width:24px;height:24px}
+    .chat-panel{right:12px;bottom:calc(118px + env(safe-area-inset-bottom))}
+  }
   @media (prefers-color-scheme: dark){
     .search-box,.ql-box,.mini-form.light{background:#0c2242;color:#e8ecf3}
     .search-hit span,.search-empty,.ql-empty{color:#a7b3c6}
@@ -884,7 +900,7 @@
       <a href="#devis" data-i18n="nav.quote">Devis</a>
       <a href="#contact" data-i18n="nav.contact">Contact</a>
     </nav>
-    <a class="btn btn-ghost" href="#liste-devis" style="padding:6px 10px;font-size:.82rem"><span data-i18n="nav.list">Ma liste de devis</span> <span class="list-count-badge" id="nav-list-count">0</span></a>
+    <a class="btn btn-ghost" href="#liste-devis"><span data-i18n="nav.list">Ma liste de devis</span> <span class="list-count-badge" id="nav-list-count">0</span></a>
     <div class="lang-switch" role="group" aria-label="Langue / Language">
       <button type="button" class="lang-btn is-active" data-lang-btn="fr">FR</button>
       <button type="button" class="lang-btn" data-lang-btn="en">EN</button>
