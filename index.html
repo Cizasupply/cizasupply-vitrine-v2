@@ -257,22 +257,22 @@
   .btn-ghost{border:1.5px solid rgba(255,255,255,.55);color:#fff;background:transparent}
   .btn-ghost:hover{border-color:var(--gold);color:var(--gold-2)}
   .btn svg{flex:none}
-  .topbar .btn{padding:10px 16px;font-size:.92rem}
+  .topbar .btn{padding:7px 11px;font-size:.84rem;gap:6px}
   .lang-switch{
     display:flex;flex:none;border:1px solid rgba(212,175,55,.55);
     border-radius:999px;overflow:hidden;background:rgba(255,255,255,.05);
   }
   .lang-btn{
     appearance:none;border:0;background:transparent;cursor:pointer;
-    font:inherit;font-weight:800;font-size:.84rem;letter-spacing:.06em;
-    color:#cfd8e6;padding:8px 14px;
+    font:inherit;font-weight:800;font-size:.78rem;letter-spacing:.06em;
+    color:#cfd8e6;padding:6px 10px;
   }
   .lang-btn.is-active{background:var(--gold);color:#241a02}
   @media (max-width:1060px){
     .topnav a:not(.btn){display:none}
     .topbar .logo img{height:52px}
     .topbar-in{gap:10px}
-    .lang-btn{padding:7px 11px}
+    .lang-btn{padding:6px 9px}
   }
 
   /* ---------- Hero ---------- */
@@ -498,8 +498,8 @@
     .topbar .logo img{height:46px}
     .topnav{display:none}
     .lang-switch{margin-left:auto}
-    .lang-btn{padding:7px 12px}
-    .topbar .btn{padding:9px 14px;font-size:.88rem}
+    .lang-btn{padding:6px 10px}
+    .topbar .btn{padding:7px 11px;font-size:.82rem}
   }
 
   /* ---------- About ---------- */
@@ -884,7 +884,7 @@
       <a href="#devis" data-i18n="nav.quote">Devis</a>
       <a href="#contact" data-i18n="nav.contact">Contact</a>
     </nav>
-    <a class="btn btn-ghost" href="#liste-devis" style="padding:9px 13px;font-size:.88rem"><span data-i18n="nav.list">Ma liste de devis</span> <span class="list-count-badge" id="nav-list-count">0</span></a>
+    <a class="btn btn-ghost" href="#liste-devis" style="padding:6px 10px;font-size:.82rem"><span data-i18n="nav.list">Ma liste de devis</span> <span class="list-count-badge" id="nav-list-count">0</span></a>
     <div class="lang-switch" role="group" aria-label="Langue / Language">
       <button type="button" class="lang-btn is-active" data-lang-btn="fr">FR</button>
       <button type="button" class="lang-btn" data-lang-btn="en">EN</button>
@@ -1873,7 +1873,7 @@
 <button type="button" class="chat-fab" id="chat-open" data-i18n="chat.open">💬 Discuter en direct</button>
 <div class="chat-panel" id="chat-panel" hidden role="dialog" aria-label="Chat">
   <h3 data-i18n="chat.h">Discutez avec CIZA SUPPLY</h3>
-  <p data-i18n="chat.p">Écrivez votre message ici : il part sur WhatsApp Burundi (+257 79 945 007), où l'équipe vous répond.</p>
+  <p data-i18n="chat.p">Écrivez votre message ici : il part sur le WhatsApp de la Direction des ventes (Liaison Internationale) au +1 514 502 9503, où l'équipe vous répond.</p>
   <textarea id="chat-msg" data-ph-fr="Votre message…" data-ph-en="Your message…" placeholder="Votre message…"></textarea>
   <div class="chat-actions">
     <button type="button" class="btn btn-wa" id="chat-send" data-i18n="chat.send">Envoyer sur WhatsApp</button>
@@ -2529,7 +2529,7 @@
       "rv.send": "Réserver ma visite",
       "chat.open": "Discuter en direct",
       "chat.h": "Discutez avec CIZA SUPPLY",
-      "chat.p": "Écrivez votre message ici : il part sur WhatsApp Burundi (+257 79 945 007), où l'équipe vous répond.",
+      "chat.p": "Écrivez votre message ici : il part sur le WhatsApp de la Direction des ventes (Liaison Internationale) au +1 514 502 9503, où l'équipe vous répond.",
       "chat.send": "Envoyer sur WhatsApp",
       "chat.close": "Fermer",
 
@@ -2892,7 +2892,7 @@
       "rv.send": "Book my visit",
       "chat.open": "Live chat",
       "chat.h": "Chat with CIZA SUPPLY",
-      "chat.p": "Write your message here: it goes to WhatsApp Burundi (+257 79 945 007), where the team replies.",
+      "chat.p": "Write your message here: it goes to the Sales Management WhatsApp (International Liaison) on +1 514 502 9503, where the team replies.",
       "chat.send": "Send via WhatsApp",
       "chat.close": "Close",
 
@@ -3500,7 +3500,7 @@
     return "LISTE DE DEVIS / QUOTE LIST\nNom / Name : "+val("ql-name")+"\nContact : "+val("ql-contact")+"\nProduits / Products :\n- "+list.join("\n- ")+"\nMessage : "+val("ql-msg");
   });
 
-  /* ----- Chat en direct -> WhatsApp Burundi ----- */
+  /* ----- Chat en direct -> WhatsApp Direction des ventes (+1, Canada) ----- */
   var panel=document.getElementById("chat-panel");
   var openB=document.getElementById("chat-open");
   if(openB && panel){
@@ -3508,7 +3508,7 @@
     document.getElementById("chat-close").addEventListener("click", function(){ panel.hidden=true; });
     document.getElementById("chat-send").addEventListener("click", function(){
       var m=document.getElementById("chat-msg").value.trim() || (L()==="en"?"Hello CIZA SUPPLY, I would like information.":"Bonjour CIZA SUPPLY, je souhaite un renseignement.");
-      window.open("https://wa.me/5145029503?text="+encodeURIComponent(m), "_blank", "noopener");
+      window.open("https://wa.me/15145029503?text="+encodeURIComponent(m), "_blank", "noopener");
     });
   }
 
